@@ -1,0 +1,58 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.1.2'
+    }
+}
+apply plugin: 'com.android.application'
+
+repositories {
+    jcenter()
+}
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "com.mo.lihtapp"
+        minSdkVersion 10
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+
+    //签名
+    signingConfigs {
+        myConfig {
+            storeFile file("lightapp_keystore")
+            storePassword "${signPwd}"
+            keyAlias "lightapp"
+            keyPassword "${signPwd}"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.myConfig
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:support-v4:21.0.2'
+}
+def versionPropsFile = file('version.properties')
+def Properties versionProps = new Properties()
+versionProps.load(new FileInputStream(versionPropsFile))
+
+ext{
+    verCode = versionProps['versionCode'].toInteger()
+    verName = versionProps['versionName'].toString()
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 2.0  UI -->
+
+    <color name="red">#fc6c00</color>
+    <color name="green">#859A51</color>
+    <color name="bg">#d1d1d1</color>
+
+</resources>
