@@ -17,7 +17,6 @@ public class MainActivity extends Activity implements View.OnClickListener{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.i("11111","111111");
         try {
             camera = Camera.open();
         } catch (Exception e) {
@@ -38,7 +37,6 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        Log.i("3333","333");
         ToggleButton tb = (ToggleButton) v;
 
         if(!tb.isChecked()){
