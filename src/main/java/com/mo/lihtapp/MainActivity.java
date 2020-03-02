@@ -39,7 +39,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
     @Override
     public void onClick(View v) {
         ToggleButton tb = (ToggleButton) v;
-
+        Log.i("222","222");
         if(!tb.isChecked()){
             isOpen = true;
             param.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
