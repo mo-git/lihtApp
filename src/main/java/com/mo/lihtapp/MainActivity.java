@@ -40,6 +40,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
         ToggleButton tb = (ToggleButton) v;
 
         if(!tb.isChecked()){
+            Log.i("333","3333");
             isOpen = true;
             param.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
             toggleButton.setBackgroundColor(0x30ffffff);
