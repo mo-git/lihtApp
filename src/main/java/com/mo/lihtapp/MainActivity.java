@@ -33,11 +33,11 @@ public class MainActivity extends Activity implements View.OnClickListener{
         toggleButton.setBackgroundResource(R.drawable.red_shape);
         camera.setParameters(param);
         camera.startPreview();
-        Log.i("2222","22222");
     }
 
     @Override
     public void onClick(View v) {
+        Log.i("3333","333");
         ToggleButton tb = (ToggleButton) v;
 
         if(!tb.isChecked()){
