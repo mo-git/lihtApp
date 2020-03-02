@@ -3,6 +3,7 @@ package com.mo.lihtapp;
 import android.hardware.Camera;
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ToggleButton;
 import android.view.WindowManager;
@@ -32,6 +33,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
         toggleButton.setBackgroundResource(R.drawable.red_shape);
         camera.setParameters(param);
         camera.startPreview();
+        Log.i("2222","22222");
     }
 
     @Override
