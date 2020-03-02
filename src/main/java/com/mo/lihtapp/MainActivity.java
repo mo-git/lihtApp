@@ -23,6 +23,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
             camera = Camera.open(0);
 
         }
+        Log.i("111","1111");
         toggleButton = (ToggleButton) this.findViewById(R.id.toggleButton1);
         toggleButton.setOnClickListener(this);
         param = camera.getParameters();
