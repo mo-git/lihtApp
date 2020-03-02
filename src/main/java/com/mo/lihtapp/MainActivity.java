@@ -3,6 +3,7 @@ package com.mo.lihtapp;
 import android.hardware.Camera;
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ToggleButton;
 import android.view.WindowManager;
@@ -16,6 +17,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.i("11111","111111");
         try {
             camera = Camera.open();
         } catch (Exception e) {
