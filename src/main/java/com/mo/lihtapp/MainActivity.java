@@ -34,6 +34,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
         toggleButton.setBackgroundResource(R.drawable.red_shape);
         camera.setParameters(param);
         camera.startPreview();
+        Log.i("2222","22222");
     }
 
     @Override
